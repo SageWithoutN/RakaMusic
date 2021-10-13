@@ -451,8 +451,17 @@ async def play(_, message: Message):
             )
         keyboard = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ ᴘᴜᴛᴀʀ 📖", callback_data="playlist")],
-                [InlineKeyboardButton("🗑 ᴛᴜᴛᴜᴘ ᴍᴇɴᴜ 🗑", callback_data="cls")],
+                [
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏸️", "puse"),
+                    InlineKeyboardButton("⏭️", "skip"),
+                    InlineKeyboardButton("⏹️", "leave"),
+                ],
+                [
+                   InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                   InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/{SUPPORT_GROUP}"),
+               ],
+               [InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="cls")]
             ]
         )
         file_name = get_file_name(audio)
@@ -496,8 +505,17 @@ async def play(_, message: Message):
         dlurl = dlurl.replace("youtube", "youtubepp")
         keyboard = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ ᴘᴜᴛᴀʀ 📖", callback_data="playlist")],
-                [InlineKeyboardButton("🗑 ᴛᴜᴛᴜᴘ ᴍᴇɴᴜ 🗑", callback_data="close")],
+                [
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏸️", "puse"),
+                    InlineKeyboardButton("⏭️", "skip"),
+                    InlineKeyboardButton("⏹️", "leave"),
+                ],
+                [
+                   InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                   InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/{SUPPORT_GROUP}"),
+               ],
+               [InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="cls")]
             ]
         )
         requested_by = message.chat.title
@@ -696,10 +714,19 @@ async def lol_cb(b, cb):
     dlurl = dlurl.replace("youtube", "youtubepp")
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ ᴘᴜᴛᴀʀ 📖", callback_data="playlist")],
-            [InlineKeyboardButton("🗑 ᴛᴜᴛᴜᴘ ᴍᴇɴᴜ 🗑", callback_data="close")],
-        ]
-    )
+                [
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏸️", "puse"),
+                    InlineKeyboardButton("⏭️", "skip"),
+                    InlineKeyboardButton("⏹️", "leave"),
+                ],
+                [
+                   InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                   InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/{SUPPORT_GROUP}"),
+               ],
+               [InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="cls")]
+            ]
+        )
     requested_by = cb.message.chat.title
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await converter.convert(youtube.download(url))
