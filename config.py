@@ -14,8 +14,8 @@ API_HASH = getenv("API_HASH")
 ARQ_API_KEY = getenv("ARQ_API_KEY", "QFOTZM-GSZUFY-CHGHRX-TDEHOZ-ARQ")
 BOT_USERNAME = getenv("BOT_USERNAME")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "GroupMusicRandom")
-OWNER = getenv("OWNER", "Tomi_sn")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "MusicRakaSupport")
+OWNER = getenv("OWNER", "rakaaanjayy")
 
 BOT_IMAGE = getenv("BOT_IMAGE", "https://telegra.ph/file/3cf32d3eae4c81dca0792.jpg")
 
