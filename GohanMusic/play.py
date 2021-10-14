@@ -93,7 +93,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/Roboto-Medium.ttf", 50)
-    font2 = ImageFont.truetype("etc/finalfont.ttf", 60)
+    font2 = ImageFont.truetype("etc/finalfont.ttf", 65)
     draw.text((25, 550), f"Diputar di: {requested_by}", (0, 0, 0), font=font)
     draw.text((25, 630), f"{title[:25]}", (0, 0, 0), font=font2)
     img.save("final.png")
