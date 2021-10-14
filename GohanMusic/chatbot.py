@@ -27,7 +27,7 @@ import GohanMusic.sql.chatbot_sql as sql
 from GohanMusic import dispatcher
 from GohanMusic.helper_funcs.chat_status import user_admin, user_admin_no_reply
 from GohanMusic.helper_funcs.filters import CustomFilters
-from GohanMusic.log_channel import gloggable
+from GohanMusic.helper_funcs.log_channel import gloggable
 
 
 @user_admin_no_reply
