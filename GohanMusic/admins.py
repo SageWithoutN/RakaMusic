@@ -20,9 +20,7 @@ async def update_admin(client, message):
     for u in admins:
         new_ads.append(u.user.id)
     a[message.chat.id] = new_ads
-    await message.reply_text(
-        "ga ush manggil-manggil raka,raka emang tamvan"
-    )
+    await message.reply_text("ga ush manggil-manggil raka,raka emang tamvan")
 
 
 @Client.on_message(command(["pause", f"pause@{BOT_USERNAME}"]) & other_filters)
