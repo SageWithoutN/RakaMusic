@@ -11,7 +11,7 @@ from helpers.decorators import authorized_users_only, errors
 from helpers.filters import command, other_filters
 
 
-@Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["raka", f"reload@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def update_admin(client, message):
@@ -21,7 +21,7 @@ async def update_admin(client, message):
         new_ads.append(u.user.id)
     a[message.chat.id] = new_ads
     await message.reply_text(
-        "✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui.**"
+        "ga ush manggil-manggil raka,raka emang tamvan"
     )
 
 
